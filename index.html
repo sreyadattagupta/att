@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendify - QR Based Attendance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple modal fade-in */
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <a href="#" class="text-2xl font-bold text-indigo-600">
+                Attendify
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="#features" class="hidden sm:block text-gray-600 hover:text-indigo-600">Features</a>
+                <a href="#how-it-works" class="hidden sm:block text-gray-600 hover:text-indigo-600">How It Works</a>
+                <a href="#login" class="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors">
+                    Login
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="login" class="w-full">
+        <section class="h-[90vh] min-h-[700px] flex items-center justify-center bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12">
+                
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+                        Effortless, Instant
+                        <span class="block text-indigo-600">QR Attendance</span>
+                    </h1>
+                    <p class="mt-6 text-lg text-gray-600 max-w-lg mx-auto lg:mx-0">
+                        Ditch the paper roll call. Our secure QR system lets students check in instantly, so teachers can get back to teaching.
+                    </p>
+                </div>
+
+                <div class="lg:w-1/2 w-full max-w-md">
+                    <div class="bg-white p-8 sm:p-12 rounded-2xl shadow-xl border border-gray-100">
+                        <h2 class="text-2xl font-bold text-center text-gray-900 mb-8">
+                            Welcome! Please log in.
+                        </h2>
+                        
+                        <button data-role="Teacher" class="login-btn w-full bg-indigo-600 text-white text-lg font-semibold py-4 px-6 rounded-xl hover:bg-indigo-700 transition-all duration-300 transform hover:-translate-y-1 shadow-indigo-200 shadow-lg">
+                            I am a Teacher
+                        </button>
+                        
+                        <button data-role="Student" class="login-btn w-full bg-gray-100 text-indigo-600 text-lg font-semibold py-4 px-6 rounded-xl hover:bg-gray-200 transition-all duration-300 transform hover:-translate-y-1 mt-6 border border-gray-200">
+                            I am a Student
+                        </button>
+
+                        <p class="text-xs text-gray-500 text-center mt-8">
+                            By logging in, you agree to our <a href="#" class="text-indigo-500 hover:underline">Terms of Service</a>.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="features" class="py-16 sm:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-16">
+                    A smarter campus for everyone
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full h-12 w-12 flex items-center justify-center mb-6">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6.707 6.707l.707-.707M4 12H2m10 10v-1M4.293 4.293l.707.707m14.707 9.293l-.707.707M4 4h1v1H4V4zm4 0h1v1H8V4zm4 0h1v1h-1V4zm4 4h1v1h-1V8zm0 4h1v1h-1v-1zm0 4h1v1h-1v-1zm-4 4h1v1h-1v-1zm-4 0h1v1H8v-1zm-4 0h1v1H4v-1zm0-4h1v1H4v-1zm0-4h1v1H4V8zm4-4h1v1H8V4zm4 0h1v1h-1V4zm4 0h1v1h-1V4zm4 4h1v1h-1V8zm0 4h1v1h-1v-1z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Instant QR Scan</h3>
+                        <p class="text-gray-600">
+                            Students scan a unique, secure QR code in seconds. No more wasted time on manual roll calls.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full h-12 w-12 flex items-center justify-center mb-6">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9 9 0 0119.945 13H11V3.055z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9zM11 13a8.969 8.969 0 01-5.968-1.953A9.026 9.026 0 013.512 15H9v4.972A9.006 9.006 0 0111 13z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Real-time Dashboard</h3>
+                        <p class="text-gray-600">
+                            Teachers get immediate access to attendance records, can track patterns, and export reports effortlessly.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full h-12 w-12 flex items-center justify-center mb-6">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Personal Records</h3>
+                        <p class="text-gray-600">
+                            Students can log in to view their own attendance history, ensuring transparency and accountability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="py-16 sm:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-16">
+                    How it works in 3 easy steps
+                </h2>
+                <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+                    
+                    <div class="flex flex-col items-center text-center max-w-xs">
+                        <div class="text-4xl font-bold text-indigo-600 bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-lg">1</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Teacher Generates QR</h3>
+                        <p class="text-gray-600">The teacher displays a unique, secure QR code on their screen for the class session.</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center max-w-xs">
+                        <div class="text-4xl font-bold text-indigo-600 bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-lg">2</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Student Scans</h3>
+                        <p class="text-gray-600">Students open the Attendify app or website on their phone and scan the code.</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center max-w-xs">
+                        <div class="text-4xl font-bold text-indigo-600 bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-lg">3</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Attendance Logged!</h3>
+                        <p class="text-gray-600">That's it. Attendance is instantly and securely recorded for both student and teacher.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+            <p>&copy; 2025 Attendify. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+                <a href="#" class="hover:text-white">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="loginModal" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 opacity-0 -z-10 hidden">
+        <div class="bg-white rounded-xl shadow-2xl p-8 max-w-sm w-full text-center">
+            <h3 id="modalTitle" class="text-2xl font-bold text-gray-900 mb-4">Login Redirect</h3>
+            <p id="modalMessage" class="text-gray-600 mb-6">Redirecting to the login page...</p>
+            <button id="closeModal" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginButtons = document.querySelectorAll('.login-btn');
+            const modal = document.getElementById('loginModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMessage = document.getElementById('modalMessage');
+            const closeModal = document.getElementById('closeModal');
+
+            if (loginButtons.length && modal && closeModal) {
+                loginButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault(); // Prevent default link behavior
+                        
+                        const role = button.getAttribute('data-role');
+                        
+                        // Customize message based on role
+                        modalTitle.textContent = `${role} Login`;
+                        modalMessage.textContent = `You would now be redirected to the ${role.toLowerCase()} login portal.`;
+
+                        // Show modal
+                        modal.classList.remove('hidden');
+                        modal.classList.remove('-z-10');
+                        modal.classList.add('z-50');
+                        modal.classList.add('opacity-100');
+
+                        // --- MODIFICATION START ---
+                        // Set the redirect URL based on the role
+                        let redirectUrl = '';
+                        if (role === 'Teacher') {
+                            redirectUrl = 'teacherlogin.html';
+                        } else if (role === 'Student') {
+                            redirectUrl = 'studentlogin.html';
+                        }
+
+                        // Redirect after a short delay so the user can see the modal
+                        if (redirectUrl) {
+                            setTimeout(() => {
+                                window.location.href = redirectUrl;
+                            }, 1200); // 1.2 second delay
+                        }
+                        // --- MODIFICATION END ---
+                    });
+                });
+
+                // Function to hide the modal
+                const hideModal = () => {
+                    modal.classList.add('opacity-0');
+                    setTimeout(() => {
+                        modal.classList.add('hidden');
+                        modal.classList.add('-z-10');
+                        modal.classList.remove('z-50');
+                    }, 250); // Match transition duration
+                };
+
+                // Close modal on button click
+                closeModal.addEventListener('click', hideModal);
+
+                // Close modal on overlay click
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        hideModal();
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
